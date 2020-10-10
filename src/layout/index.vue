@@ -11,6 +11,8 @@
   </div>
 </template>
 
+<!-- 引入组件库 -->
+
 <script>
 import { Navbar, Sidebar, AppMain } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
@@ -25,6 +27,7 @@ export default {
   mixins: [ResizeMixin],
   computed: {
     sidebar() {
+      console.log(this.$store)
       return this.$store.state.app.sidebar
     },
     device() {
@@ -90,4 +93,7 @@ export default {
   .mobile .fixed-header {
     width: 100%;
   }
+  
 </style>
+
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
